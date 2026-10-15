@@ -1,0 +1,128 @@
+/* Aether Waybar — soft glass with cool blue/violet accents */
+* {
+    font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    min-height: 0;
+    border: none;
+    border-radius: 0;
+    transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease;
+}
+
+window#waybar {
+    background: rgba(20, 22, 31, 0.80); /* 20% transparent */
+    color: #e8ecf8;
+    border: 1px solid rgba(148, 163, 255, 0.18);
+    border-radius: 14px;
+}
+
+tooltip {
+    background: rgba(24, 27, 39, 0.96);
+    color: #edf0ff;
+    border: 1px solid rgba(139, 155, 255, 0.42);
+    border-radius: 10px;
+}
+tooltip label { padding: 5px 7px; color: #edf0ff; }
+
+/* Workspaces */
+#workspaces {
+    margin: 5px 7px;
+    padding: 2px 4px;
+    background: rgba(255, 255, 255, 0.035);
+    border-radius: 10px;
+}
+#workspaces button {
+    color: #9ca6c2;
+    background: transparent;
+    padding: 0 11px;
+    margin: 2px;
+    border-radius: 8px;
+    border-bottom: 2px solid transparent;
+}
+#workspaces button:hover {
+    color: #ffffff;
+    background: rgba(126, 145, 255, 0.19);
+    border-bottom-color: #9aa8ff;
+}
+#workspaces button.active {
+    color: #171a2a;
+    background: #aab6ff;
+    border-bottom-color: #d2d8ff;
+    font-weight: 700;
+}
+#workspaces button.urgent {
+    color: #ffffff;
+    background: #c65372;
+    border-bottom-color: #ff9bb3;
+}
+
+/* Taskbar */
+#taskbar { margin: 0 5px; padding: 2px 3px; }
+#taskbar button {
+    padding: 0 8px;
+    margin: 3px 2px;
+    border-radius: 9px;
+    background: transparent;
+    border: 1px solid transparent;
+}
+#taskbar button:hover {
+    background: rgba(139, 155, 255, 0.16);
+    border-color: rgba(139, 155, 255, 0.24);
+}
+#taskbar button.active {
+    background: rgba(139, 155, 255, 0.22);
+    border-color: rgba(139, 155, 255, 0.32);
+}
+
+/* Active window and clock */
+#window { color: #b8c4e8; padding: 0 14px; margin: 6px 0; }
+#clock {
+    color: #f1f3ff;
+    font-weight: 700;
+    padding: 0 15px;
+    margin: 5px 8px;
+    background: rgba(139, 155, 255, 0.11);
+    border: 1px solid rgba(139, 155, 255, 0.13);
+    border-radius: 10px;
+}
+#clock:hover {
+    color: #ffffff;
+    background: rgba(139, 155, 255, 0.22);
+    border-color: rgba(170, 182, 255, 0.4);
+}
+
+/* Right-side controls */
+#network, #custom-bluetooth, #backlight, #pulseaudio, #battery {
+    padding: 0 12px;
+    margin: 7px 2px;
+    color: #d7def4;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid transparent;
+    border-radius: 9px;
+}
+#network:hover, #custom-bluetooth:hover, #backlight:hover,
+#pulseaudio:hover, #battery:hover {
+    background: rgba(139, 155, 255, 0.13);
+    border-color: rgba(139, 155, 255, 0.24);
+    color: #ffffff;
+}
+#network { color: #83d9ff; }
+#network.disconnected { color: #ff9ba8; }
+#custom-bluetooth { color: #b7a5ff; }
+#backlight { color: #ffd58a; }
+#pulseaudio { color: #8ee6cb; }
+#pulseaudio.muted { color: #8b93aa; }
+#battery { color: #b8f0bd; }
+#battery.charging, #battery.plugged {
+    color: #76e6bb;
+    background: rgba(68, 211, 158, 0.09);
+}
+#battery.warning {
+    color: #ffd166;
+    background: rgba(255, 209, 102, 0.09);
+}
+#battery.critical {
+    color: #ff7b8b;
+    background: rgba(255, 91, 115, 0.13);
+    border-color: rgba(255, 91, 115, 0.22);
+}
